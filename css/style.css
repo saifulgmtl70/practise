@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Nunito&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Andika', sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+section
+{
+    padding: 0 6%;
+}
+
+.section_heading
+{
+    text-align: center;
+
+}
+
+.section_heading h2
+{
+    color: #07294d;
+    font-size: 45px;
+    line-height: 45px;
+    padding: 30px 0;
+    text-transform: capitalize;
+}
+
+
+
+/* Header css started from here */
+.header
+{
+    padding: 10px 6%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 3px 3px #666;
+    z-index: 1000;
+}
+
+.header .logo a
+{
+    color: #222222;
+    font-weight: bolder;
+    font-size: 28px; ;
+    letter-spacing: 1.2px;
+}
+
+.header .navbar
+{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+}
+
+.header .navbar li
+{
+    margin: 0 10px;
+}
+
+.header .navbar li:hover{
+
+    margin-bottom: 2px solid #42A5F5;
+}
+
+.header .navbar li a
+{
+    color: #1B2C3D;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.header .navbar li a:hover
+{
+    color: #42A5F5;
+    
+}
+
+#nav_bars i
+{
+    display: block;
+    color: #671457;
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Header css ended here */
+
+
+
+/* Home_Banner css started from here */
+.banner
+{
+    background: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 200px 6%;
+    /* position: relative; */
+    /* z-index: 1; */
+}
+
+.banner::before
+{
+    content: '';
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #b0b6be;
+    /* z-index: -1; */
+    opacity: .9;
+}
+
+.banner .banner_content
+{
+    margin-top: -30px;
+}
+
+.banner .banner_content h2
+{
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 7px;
+}
+
+.banner .banner_content h2 span
+{
+    color: #07294d;
+}
+
+.banner .banner_content p
+{
+    margin-bottom: 20px;
+}
+
+.banner .banner_content .home_btn
+{
+    color: #f5f5f5;
+    padding: 7px 20px;
+    background-color: #247CF0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+
+/* Home_Banner css ended here */
+
+.card_section
+{
+    background-color: #f5f5f5;
+    padding: 50px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                          
+}
+
+.card_section .card
+{
+    padding: 50px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.67);
+    -webkit-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.67);
+    -moz-box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.67);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.card_section .card:hover
+{
+    background-color: #247CF0; 
+}
+
+.about
+{
+    background-color: #fff;
+    padding: 70px 6%;
+}
+
+.about .section_heading
+{
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.about .section_heading h4
+{
+    font-size: 23px;
+    color: #42A5F5;
+}
+
+.about .section_heading h1
+
+{
+    font-size:40px;
+    color: #525353;
+}
+
+.about .section_heading h1 span
+{
+    color: #106EEA;
+}
+
+.about .section_heading p
+{
+    color: #525353;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px)
+{
+    .header
+    {
+        padding: 6 5%;
+    }
+
+    #nav_bars i
+    {
+        display: block;
+    }
+
+    .header .navbar
+    {
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        right: 3%;
+        /* display: flex;
+        flex-direction: column; */
+        display: block;
+        background-color: #eee;
+        padding: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+
+    .header .navbar.active
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+
+  
+
+    .header .navbar li
+    {
+        margin: 10px;
+    }
+
+    .card_section
+    {
+        
+        display: flex;
+        flex-direction: column;                         
+    }
+
+}
